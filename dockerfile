@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:22
+FROM node:22-alpine
 
 # Set the working directory in the container
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+#RUN npm install
 
 # Copy the rest of the application code to the working directory
 COPY . .
